@@ -61,3 +61,75 @@ div p{
     text-shadow: none; 
   }
 }
+
+    @keyframes blink {
+      0% {
+        box-shadow: 0 0 0;
+      }
+            20% {
+        box-shadow:inset( 0 0 10px aliceblue);
+      }
+      50% {
+        box-shadow:inset( 0 0 50px aliceblue);
+      }
+      100% {
+        box-shadow:inset( 0 0 10px aliceblue);
+      }
+    }
+
+    heading {
+      backdrop-filter: blur(10px);
+     /* box-shadow: 0 0 10px aliceblue;*/
+      margin: 20px;
+      height: 145px;
+      position: fixed;
+      border-radius: 50px;
+      animation: blink 2s infinite;
+      display:flex;
+      align-items: center; 
+      justify-content: center; 
+      padding: 10px; 
+      box-sizing: border-box;
+    }
+
+    heading img {
+      padding: 10px;
+    }
+
+    heading img:first-of-type {
+      width: 120px;
+    }
+
+    heading img:last-of-type {
+      width: 150px;
+      padding: 0;
+    }
+    
+    .animated-heading img1 {
+    transition: transform .5s;
+}
+
+    .animated-heading img2 {
+    transition: transform .5s;
+}
+
+
+.img1:hover {
+    transform: scale(1.3);
+    filter: drop-shadow(0.6rem 0.6rem 1rem rgba(255, 255, 255, 0.8));
+    /*border-radius: 50%;*/
+    transition: 0.8s ease;
+}  
+
+.img2:hover  {
+    transform: scale(1.3);
+    filter: drop-shadow(0.6rem 0.6rem 1rem rgba(20, 20, 180, 0.8));
+    /*border-radius: 50%;*/
+    transition: 0.8s ease;
+}       
+
+.img2{
+position:relative;
+}
+
+
